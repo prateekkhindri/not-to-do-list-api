@@ -1,3 +1,18 @@
 ### root api endpoint
 
 GET http://localhost:8000
+
+
+#Task API's
+
+### get tasks
+GET http://localhost:8000/api/v1/tasks
+
+### post tasks
+POST http://localhost:8000/api/v1/tasks
+
+### patch tasks
+PATCH http://localhost:8000/api/v1/tasks
+
+### delete tasks
+DELETE http://localhost:8000/api/v1/tasks
