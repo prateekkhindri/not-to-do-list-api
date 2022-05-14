@@ -3,30 +3,13 @@ const app = express();
 
 const PORT = 8000;
 
+app.use(express.json());
+
 // Task API endpoints
-app.get("/api/v1/tasks", (req, res) => {
-  res.json({
-    message: "Hello get response",
-  });
-});
 
-app.post("/api/v1/tasks", (req, res) => {
-  res.json({
-    message: "Hello post response",
-  });
-});
+import taskRouter from "./src/router/taskRouter.js";
 
-app.patch("/api/v1/tasks", (req, res) => {
-  res.json({
-    message: "Hello patch response",
-  });
-});
-
-app.delete("/api/v1/tasks", (req, res) => {
-  res.json({
-    message: "Hello delete response",
-  });
-});
+app.use("/api/v1/tasks", taskRouter);
 
 app.get("/", (req, res) => {
   res.json({
@@ -34,6 +17,7 @@ app.get("/", (req, res) => {
   });
 });
 
+// Making our project available for local host 8000
 app.listen(PORT, (error) => {
   error && console.log(error);
 

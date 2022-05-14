@@ -10,6 +10,12 @@ GET http://localhost:8000/api/v1/tasks
 
 ### post tasks
 POST http://localhost:8000/api/v1/tasks
+Content-type: application/json
+
+{
+    "task": "Coding",
+    "hr": 5
+}
 
 ### patch tasks
 PATCH http://localhost:8000/api/v1/tasks
