@@ -1,4 +1,5 @@
 import express from "express";
+import { insertTask } from "../model/Task.model.js";
 
 const router = express.Router();
 
@@ -8,8 +9,11 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   console.log(req.body);
+
+  const result = await insertTask(req.body);
+  console.log(result);
   res.json({
     message: "Hello post response",
   });
