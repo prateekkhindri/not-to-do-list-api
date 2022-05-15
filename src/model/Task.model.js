@@ -8,8 +8,8 @@ export const insertTask = (taskObj) => {
 };
 
 // Read Tasks
-// const readTasks = () => {
-//   return TaskSchema.find();
-// };
+export const readTasks = () => {
+  return TaskSchema.find();
+};
 
 // Delete Task

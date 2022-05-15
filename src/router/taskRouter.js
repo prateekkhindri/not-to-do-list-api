@@ -1,11 +1,14 @@
 import express from "express";
-import { insertTask } from "../model/Task.model.js";
+import { insertTask, readTasks } from "../model/Task.model.js";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  const result = await readTasks();
+  console.log(result);
   res.json({
     message: "Hello get response",
+    result,
   });
 });
 
