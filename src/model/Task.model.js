@@ -13,3 +13,12 @@ export const readTasks = () => {
 };
 
 // Delete Task
+
+export const deleteTask = (_id) => {
+  return TaskSchema.findByIdAndDelete(_id);
+};
+
+// Deleting multiple tasks with ids as an array
+export const deleteMultipleTasks = (_ids) => {
+  return TaskSchema.deleteMany({ _id: { $in: _ids } });
+};

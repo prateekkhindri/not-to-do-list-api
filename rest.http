@@ -18,7 +18,19 @@ Content-type: application/json
 }
 
 ### patch tasks
-PATCH http://localhost:8000/api/v1/tasks
+# PATCH http://localhost:8000/api/v1/tasks
 
-### delete tasks
-DELETE http://localhost:8000/api/v1/tasks
+### delete single task
+# DELETE http://localhost:8000/api/v1/tasks/62804d6d60669196b87e9296
+
+
+### delete multiple tasks
+DELETE http://localhost:8000/api/v1/tasks/
+Content-Type: application/json
+
+{
+    "ids": [
+        "62804dfa60669196b87e9298",
+        "62804f3ed94571d9caeccb94"
+    ]
+}

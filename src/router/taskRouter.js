@@ -1,5 +1,10 @@
 import express from "express";
-import { insertTask, readTasks } from "../model/Task.model.js";
+import {
+  insertTask,
+  readTasks,
+  deleteTask,
+  deleteMultipleTasks,
+} from "../model/Task.model.js";
 
 const router = express.Router();
 
@@ -22,15 +27,25 @@ router.post("/", async (req, res) => {
   });
 });
 
-router.patch("/", (req, res) => {
-  res.json({
-    message: "Hello patch response",
-  });
-});
+// router.patch("/", (req, res) => {
+//   res.json({
+//     message: "Hello patch response",
+//   });
+// });
 
-router.delete("/", (req, res) => {
+// router.delete("/:_id", async (req, res) => {
+router.delete("/", async (req, res) => {
+  // console.log(req.params._id);
+
+  // const result = await deleteTask(req.params._id);
+  // console.log(result);
+  const { ids } = req.body;
+  const result = await deleteMultipleTasks(ids);
+  console.log(result);
+
   res.json({
     message: "Hello delete response",
+    result,
   });
 });
 
