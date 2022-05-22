@@ -22,3 +22,7 @@ export const deleteTask = (_id) => {
 export const deleteMultipleTasks = (_ids) => {
   return TaskSchema.deleteMany({ _id: { $in: _ids } });
 };
+
+export const updateTask = (filter, obj) => {
+  return TaskSchema.findOneAndUpdate(filter, obj, { new: true });
+};

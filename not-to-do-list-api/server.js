@@ -1,8 +1,10 @@
 import "dotenv/config";
 
 import express from "express";
+import cors from "cors";
+
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Connect to Mongodb
 import { connectMongoDB } from "./src/config/dbConfig.js";
@@ -12,6 +14,7 @@ console.log(process.env);
 
 // Convert incoming json object and making it available in the req object
 app.use(express.json());
+app.use(cors());
 
 // Task API endpoints
 

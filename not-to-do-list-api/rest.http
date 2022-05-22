@@ -18,14 +18,20 @@ Content-type: application/json
 }
 
 ### patch tasks
-# PATCH http://localhost:8000/api/v1/tasks
+PATCH http://localhost:8000/api/v1/tasks
+Content-Type: application/json
+
+{
+    "id": "6288597b9ebe99d3392f3d93",
+    "type": "testTask"
+}
 
 ### delete single task
 # DELETE http://localhost:8000/api/v1/tasks/62804d6d60669196b87e9296
 
 
 ### delete multiple tasks
-DELETE http://localhost:8000/api/v1/tasks/
+DELETE http://localhost:8000/api/v1/tasks
 Content-Type: application/json
 
 {
