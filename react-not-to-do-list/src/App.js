@@ -54,7 +54,7 @@ const App = () => {
   }, 0);
 
   const totalHrs = ttlHrBadList + ttlHrEntryList;
-
+  console.log(totalHrs);
   // 9. Alert when delete is clicked
 
   // const deleteTask = (_id) => {
