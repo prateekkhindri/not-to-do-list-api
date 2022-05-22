@@ -54,7 +54,7 @@ const App = () => {
   }, 0);
 
   const totalHrs = ttlHrBadList + ttlHrEntryList;
-  console.log(totalHrs);
+
   // 9. Alert when delete is clicked
 
   // const deleteTask = (_id) => {
@@ -238,7 +238,9 @@ const App = () => {
 
         <Row>
           <Col>
-            <h3 className="mt-5">The total allocated hours is: {totalHrs}</h3>
+            <h3 className="mt-5">
+              The total allocated hours is: {totalHrs}hrs
+            </h3>
           </Col>
         </Row>
       </Container>

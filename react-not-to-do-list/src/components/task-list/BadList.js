@@ -5,6 +5,7 @@ export const BadList = ({
   badList,
   removeFromTaskList,
   switchTask,
+  ttlHrBadList,
   handleOnSelectItem,
 }) => {
   // Responsive using bootstrap - md="6" here is the screen size
@@ -15,7 +16,7 @@ export const BadList = ({
       <Table striped hover>
         <tbody>
           {badList.map((item, i) => (
-            <tr key={i}>
+            <tr key={item._id}>
               <td>
                 <Form.Check
                   type="checkbox"
@@ -35,7 +36,7 @@ export const BadList = ({
                   }
                 >
                   <i className="fa-solid fa-arrow-left-long"></i>
-                </Button>
+                </Button>{" "}
                 <Button
                   variant="danger"
                   onClick={() => removeFromTaskList([item._id])}
@@ -48,7 +49,9 @@ export const BadList = ({
         </tbody>
       </Table>
 
-      <h4 className="mt-4 text-danger">You could have saved: 20 hrs</h4>
+      <h4 className="mt-4 text-danger">
+        You could have saved: {ttlHrBadList}hrs
+      </h4>
     </div>
   );
 };

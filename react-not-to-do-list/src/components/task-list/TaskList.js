@@ -34,7 +34,7 @@ export const TaskList = ({
                 {/*This td will have 2 buttons  */}
                 <Button
                   variant="danger"
-                  onClick={() => removeFromTaskList(item._id)}
+                  onClick={() => removeFromTaskList([item._id])}
                 >
                   <i className="fa-solid fa-trash-can"></i>
                 </Button>{" "}
