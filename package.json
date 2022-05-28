@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon not-to-do-list-api/server.js",
+    "dev": "nodemon not-to-do-list-api/server.js",
+    "heroku-postbuild": "npm install --prefix react-not-to-do-list and npm run build --prefix react-not-to-list",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
