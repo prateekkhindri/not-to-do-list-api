@@ -23,10 +23,10 @@ All the API's will follow the following URL: `{rootUrl}/api/v1/`
 All the task API's will follow the following URL: `{rootUrl}/api/v1/tasks/`
 
 | #   | API | METHOD   | DESCRIPTION                                                   |
-| --- | --- | -------- | ------------------------------------------------------------- | --- | --- |
+| --- | --- | -------- | ------------------------------------------------------------- |
 | 1.  | `/` | `GET`    | fetch all the tasks from the database                         |
 | 2.  | `/` | `POST`   | send new task to add in the database                          |
-| 3.  | `/` | `PATCH`  | update task, ie switch the task item to not to do list        |     |     |
+| 3.  | `/` | `PATCH`  | update task, ie switch the task item to not to do list        |
 | 4.  | `/` | `DELETE` | send single or multiple task id's to delete from the database |
 
 ### User API
